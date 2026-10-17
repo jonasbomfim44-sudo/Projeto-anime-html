@@ -1,0 +1,115 @@
+/* ==========================================
+   CONFIGURAÇÃO DO DESIGN GLOBAL DO SITE
+   ========================================== */
+   body {
+    background-image: url("imagens/fundoparallax.avif"); 
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #222;
+  }
+  
+  /* ==========================================
+     PADRONIZAÇÃO DOS CARDS DE CONTEÚDO
+     ========================================== */
+  
+  /* Bloco cinza por trás da imagem */
+  .container-img-card {
+    width: 200px !important;
+    height: 230px !important; 
+    flex-shrink: 0;           
+    background-color: #eaeaea;
+  }
+  
+  /* Configuração milimétrica das imagens */
+  .img-card {
+    width: 200px !important;   
+    height: 100% !important;  
+    object-fit: cover;        
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  
+  /* Ajustes de foco */
+  .foco-topo {
+    object-position: center top !important;
+  }
+  
+  .foco-base {
+    object-position: center bottom !important;
+  }
+  
+  /* ==========================================
+     ANIMAÇÕES DE AURA (KI MÁXIMO EXTERNO E INTERNO)
+     ========================================== */
+  
+  /* ---------- 1. AURA DOURADA SUPER FORTE (SSJ1, SSJ2, GRAU 2 E 3) ---------- */
+  @keyframes auraDourada {
+    0% { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6)); }
+    50% { filter: drop-shadow(0 0 25px rgba(255, 215, 0, 1)) drop-shadow(0 0 35px rgba(255, 140, 0, 0.8)); }
+    100% { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6)); }
+  }
+  .aura-ssj {
+    animation: auraDourada 2s infinite ease-in-out;
+    border-left: 6px solid #ffd700 !important;
+  }
+  .aura-ssj .container-img-card, .aura-ssj h3 {
+    animation: auraDourada 2s infinite ease-in-out;
+  }
+  
+  /* ---------- 2. AURA AZUL DIVINA (SSJ GOD, BLUE, EVOLUTION) ---------- */
+  @keyframes auraAzul {
+    0% { filter: drop-shadow(0 0 6px rgba(0, 191, 255, 0.6)); }
+    50% { filter: drop-shadow(0 0 25px rgba(0, 162, 255, 1)) drop-shadow(0 0 35px rgba(0, 0, 255, 0.7)); }
+    100% { filter: drop-shadow(0 0 6px rgba(0, 191, 255, 0.6)); }
+  }
+  .aura-blue {
+    animation: auraAzul 1.8s infinite ease-in-out;
+    border-left: 6px solid #00a2ff !important;
+  }
+  .aura-blue .container-img-card, .aura-blue h3 {
+    animation: auraAzul 1.8s infinite ease-in-out;
+  }
+  
+  /* ---------- 3. AURA ROXA DO EGO SUPERIOR ---------- */
+  @keyframes auraRoxa {
+    0% { filter: drop-shadow(0 0 6px rgba(186, 85, 211, 0.6)); }
+    50% { filter: drop-shadow(0 0 25px rgba(140, 0, 255, 1)) drop-shadow(0 0 35px rgba(75, 0, 130, 0.8)); }
+    100% { filter: drop-shadow(0 0 6px rgba(186, 85, 211, 0.6)); }
+  }
+  .aura-ego {
+    animation: auraRoxa 2.2s infinite ease-in-out;
+    border-left: 6px solid #8c00ff !important;
+  }
+  .aura-ego .container-img-card, .aura-ego h3 {
+    animation: auraRoxa 2.2s infinite ease-in-out;
+  }
+  
+  /* ---------- 4. AURA VERMELHA FURIOSA (OOZARU / SAGA SAIYAJIN) ---------- */
+  @keyframes auraVermelha {
+    0% { filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.5)); }
+    50% { filter: drop-shadow(0 0 25px rgba(255, 0, 0, 1)) drop-shadow(0 0 35px rgba(139, 0, 0, 0.8)); }
+    100% { filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.5)); }
+  }
+  .aura-vermelha {
+    animation: auraVermelha 2s infinite ease-in-out;
+    border-left: 6px solid #ff0000 !important;
+  }
+  .aura-vermelha .container-img-card, .aura-vermelha h3 {
+    animation: auraVermelha 2s infinite ease-in-out;
+  }
+  
+  
+  
+  
+  
+  
+  
+  

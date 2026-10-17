@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akira Toriyama e o Legado de Vegeta</title>
+
+    <link rel="stylesheet" href="estilo.css">
 </head>
-<body style="font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; line-height: 1.6; background-color: #f7f9fa; color: #222;">
+<body>
 
     <!-- MENU DE NAVEGAÇÃO  -->
     <nav style="text-align: center; margin-bottom: 40px; padding: 15px; background-color: #ffffff; border: 1px solid #e1e4e6; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
@@ -23,12 +25,13 @@
     <p style="text-align: center; font-style: italic; margin-bottom: 40px; color: #666;">A genialidade do criador e a revolução narrativa que moldou os mangás modernos.</p>
 
     <!-- CONTAINER DOS CARDS ROBUSTOS -->
+    <div class="parallax">
     <div style="max-width: 900px; margin: 0 auto;">
 
         <!-- VISÃO GERAL -->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #2600ff; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
-                <img src="./imagens/akira.webp" alt="Mestre Akira Toriyama" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="./imagens/akira.webp" class="img-card">
             </div>
             <div style="padding: 25px; display: flex; flex-direction: column; justify-content: center;">
                 <h3 style="margin: 0 0 5px 0; color: #111; font-size: 1.4em;">A Mente por Trás do Fenômeno</h3>
@@ -42,7 +45,7 @@
         <!-- O GÊNIO POR TRÁS DA OBRA -->
         <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
-                <img src="./imagens/dragon_ball.png" alt="Desenho Dragon Ball" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="./imagens/dragon_ball.png" class="img-card">
             </div>
             <div style="padding: 25px; display: flex; flex-direction: column; justify-content: center;">
                 <h3 style="margin: 0 0 5px 0; color: #111; font-size: 1.4em;">O Gênio por Trás da Obra</h3>
@@ -54,9 +57,9 @@
         </div>
 
         <!-- A PRIMEIRA APARIÇÃO -->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #2600ff; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
-                <img src="./imagens/primeira apari.jpg" alt="Primeira Aparição" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="./imagens/primeira apari.jpg" class="img-card">
             </div>
             <div style="padding: 25px; display: flex; flex-direction: column; justify-content: center;">
                 <h3 style="margin: 0 0 5px 0; color: #111; font-size: 1.4em;">A Primeira Aparição de Vegeta</h3>
@@ -70,7 +73,7 @@
         <!-- A IMPORTÂNCIA DO PERSONAGEM -->
         <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 0; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
-                <img src="./imagens/importancia vgt.png" alt="Vegeta Legado" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="./imagens/importancia vgt.png" class="img-card">
             </div>
             <div style="padding: 25px; display: flex; flex-direction: column; justify-content: center;">
                 <h3 style="margin: 0 0 5px 0; color: #111; font-size: 1.4em;">Importância para a Franquia</h3>
@@ -81,6 +84,7 @@
             </div>
         </div>
 
+    </div>
     </div>
 
     <footer style="text-align: center; margin-top: 50px; padding: 20px; border-top: 1px solid #e1e4e6; color: #666; font-size: 0.9em;">
