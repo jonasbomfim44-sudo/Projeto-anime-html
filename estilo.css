@@ -1,12 +1,13 @@
 /* ==========================================
-   CONFIGURAÇÃO DO DESIGN GLOBAL DO SITE
+   1. CONFIGURAÇÃO DO DESIGN GLOBAL COM PARALLAX
    ========================================== */
    body {
+    /* Força a imagem a cobrir a tela e ficar FIXA enquanto o site rola */
     background-image: url("imagens/fundoparallax.avif"); 
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-attachment: fixed !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     
     font-family: Arial, sans-serif;
     max-width: 1000px;
@@ -16,95 +17,257 @@
     color: #222;
   }
   
+  /* Correção do menu de navegação (hover destacado) */
+  nav a {
+    transition: color 0.2s ease-in-out;
+  }
+  nav a:hover {
+    color: #0044cc !important; 
+    text-decoration: underline !important; 
+  }
+  
   /* ==========================================
-     PADRONIZAÇÃO DOS CARDS DE CONTEÚDO
+     2. PADRONIZAÇÃO DOS CARDS DE CONTEÚDO (FORMATO VERTICAL)
      ========================================== */
   
-  /* Bloco cinza por trás da imagem */
+  /* Formato de 'Card de Personagem' (Alto e Elegante) */
   .container-img-card {
-    width: 200px !important;
-    height: 230px !important; 
+    width: 180px !important;  
+    height: 260px !important; 
     flex-shrink: 0;           
-    background-color: #eaeaea;
+    background-color: #222;   /* Fundo escuro caso a imagem demore a carregar */
+    overflow: hidden;         
+    position: relative;       /* Necessário para conter o raio em zigue-zague */
   }
   
-  /* Configuração milimétrica das imagens */
+  /* Preenchimento perfeito e efeito profissional de zoom */
   .img-card {
-    width: 200px !important;   
+    width: 100% !important;   
     height: 100% !important;  
-    object-fit: cover;        
+    object-fit: cover;        /* Preenche tudo sem deixar bordas ou faixas cinzas */
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   }
   
-  /* Ajustes de foco */
+  /* Efeito dinâmico ao passar o mouse no card */
+  .container-img-card:hover .img-card {
+    transform: scale(1.06); 
+  }
+  
+  /* Garante o enquadramento perfeito focando no rosto/cabelo do Vegeta */
   .foco-topo {
     object-position: center top !important;
   }
-  
   .foco-base {
     object-position: center bottom !important;
   }
   
   /* ==========================================
-     ANIMAÇÕES DE AURA (KI MÁXIMO EXTERNO E INTERNO)
+     3. ANIMAÇÕES DE AURA COM TRANSPARÊNCIA E ESTALOS
      ========================================== */
   
-  /* ---------- 1. AURA DOURADA SUPER FORTE (SSJ1, SSJ2, GRAU 2 E 3) ---------- */
+  /* Deixa o fundo dos cards levemente translúcido para o parallax aparecer atrás deles */
+  .aura-ssj, .aura-blue, .aura-ego, .aura-vermelha {
+    background-color: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(5px); /* Efeito vidro fosco */
+    transition: filter 0.2s ease-in-out;
+  }
+  
+  /* ---------- 1. AURA DOURADA COM ESTALOS ELÉTRICOS (SSJ2 / GRAUS) ---------- */
   @keyframes auraDourada {
-    0% { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6)); }
-    50% { filter: drop-shadow(0 0 25px rgba(255, 215, 0, 1)) drop-shadow(0 0 35px rgba(255, 140, 0, 0.8)); }
-    100% { filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6)); }
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }
+    20% { filter: drop-shadow(0 0 28px rgba(255, 215, 0, 1)) drop-shadow(0 0 8px rgba(255,255,255,0.9)); }
+    23% { filter: drop-shadow(0 0 12px rgba(255, 140, 0, 0.6)); } /* Micro-estalo/queda rápida de Ki */
+    25% { filter: drop-shadow(0 0 35px rgba(255, 215, 0, 1)) drop-shadow(0 0 40px rgba(255, 140, 0, 0.8)); }
+    60% { filter: drop-shadow(0 0 30px rgba(255, 215, 0, 1)); }
+    62% { filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4)); } /* Outro estalo elétrico */
   }
-  .aura-ssj {
-    animation: auraDourada 2s infinite ease-in-out;
-    border-left: 6px solid #ffd700 !important;
-  }
-  .aura-ssj .container-img-card, .aura-ssj h3 {
-    animation: auraDourada 2s infinite ease-in-out;
-  }
+  .aura-ssj { border-left: 6px solid #ffd700 !important; }
+  .aura-ssj:hover { animation: auraDourada 1.2s infinite linear; }
+  .aura-ssj:hover .container-img-card, .aura-ssj:hover h3 { animation: auraDourada 1.2s infinite linear; }
   
-  /* ---------- 2. AURA AZUL DIVINA (SSJ GOD, BLUE, EVOLUTION) ---------- */
+  /* ---------- 2. AURA AZUL COM ESTALOS ELÉTRICOS (BLUE / GOD) ---------- */
   @keyframes auraAzul {
-    0% { filter: drop-shadow(0 0 6px rgba(0, 191, 255, 0.6)); }
-    50% { filter: drop-shadow(0 0 25px rgba(0, 162, 255, 1)) drop-shadow(0 0 35px rgba(0, 0, 255, 0.7)); }
-    100% { filter: drop-shadow(0 0 6px rgba(0, 191, 255, 0.6)); }
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(0, 191, 255, 0.5)); }
+    20% { filter: drop-shadow(0 0 28px rgba(0, 162, 255, 1)) drop-shadow(0 0 8px rgba(255,255,255,0.9)); }
+    23% { filter: drop-shadow(0 0 12px rgba(0, 0, 255, 0.6)); } 
+    25% { filter: drop-shadow(0 0 35px rgba(0, 191, 255, 1)) drop-shadow(0 0 40px rgba(0, 0, 255, 0.7)); }
+    60% { filter: drop-shadow(0 0 30px rgba(0, 162, 255, 1)); }
+    62% { filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5)); } 
   }
-  .aura-blue {
-    animation: auraAzul 1.8s infinite ease-in-out;
-    border-left: 6px solid #00a2ff !important;
-  }
-  .aura-blue .container-img-card, .aura-blue h3 {
-    animation: auraAzul 1.8s infinite ease-in-out;
-  }
+  .aura-blue { border-left: 6px solid #00a2ff !important; }
+  .aura-blue:hover { animation: auraAzul 1.2s infinite linear; }
+  .aura-blue:hover .container-img-card, .aura-blue:hover h3 { animation: auraAzul 1.2s infinite linear; }
   
-  /* ---------- 3. AURA ROXA DO EGO SUPERIOR ---------- */
+  /* ---------- 3. AURA ROXA COM ESTALOS ELÉTRICOS (EGO SUPERIOR) ---------- */
   @keyframes auraRoxa {
-    0% { filter: drop-shadow(0 0 6px rgba(186, 85, 211, 0.6)); }
-    50% { filter: drop-shadow(0 0 25px rgba(140, 0, 255, 1)) drop-shadow(0 0 35px rgba(75, 0, 130, 0.8)); }
-    100% { filter: drop-shadow(0 0 6px rgba(186, 85, 211, 0.6)); }
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(186, 85, 211, 0.5)); }
+    20% { filter: drop-shadow(0 0 28px rgba(140, 0, 255, 1)) drop-shadow(0 0 8px rgba(255,255,255,0.9)); }
+    23% { filter: drop-shadow(0 0 12px rgba(75, 0, 130, 0.6)); } 
+    25% { filter: drop-shadow(0 0 35px rgba(140, 0, 255, 1)) drop-shadow(0 0 40px rgba(75, 0, 130, 0.8)); }
+    60% { filter: drop-shadow(0 0 30px rgba(140, 0, 255, 1)); }
+    62% { filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4)); } 
   }
-  .aura-ego {
-    animation: auraRoxa 2.2s infinite ease-in-out;
-    border-left: 6px solid #8c00ff !important;
+  .aura-ego { border-left: 6px solid #8c00ff !important; }
+  .aura-ego:hover { animation: auraRoxa 1.2s infinite linear; }
+  .aura-ego:hover .container-img-card, .aura-ego:hover h3 { animation: auraRoxa 1.2s infinite linear; }
+  
+  /* ---------- 4. AURA VERMELHA COM ESTALOS ELÉTRICOS (SSJ4 / OOZARU) ---------- */
+  @keyframes auraVermelha {
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.4)); }
+    20% { filter: drop-shadow(0 0 28px rgba(255, 0, 0, 1)) drop-shadow(0 0 8px rgba(255,255,255,0.9)); }
+    23% { filter: drop-shadow(0 0 12px rgba(139, 0, 0, 0.6)); } 
+    25% { filter: drop-shadow(0 0 35px rgba(255, 0, 0, 1)) drop-shadow(0 0 40px rgba(139, 0, 0, 0.8)); }
+    60% { filter: drop-shadow(0 0 30px rgba(255, 0, 0, 1)); }
+    62% { filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4)); } 
   }
-  .aura-ego .container-img-card, .aura-ego h3 {
-    animation: auraRoxa 2.2s infinite ease-in-out;
+  .aura-vermelha { border-left: 6px solid #ff0000 !important; }
+  .aura-vermelha:hover { animation: auraVermelha 1.2s infinite linear; }
+  .aura-vermelha:hover .container-img-card, .aura-vermelha:hover h3 { animation: auraVermelha 1.2s infinite linear; }
+  
+  /* ==========================================
+     4. EFEITO DE RAIO EM ZIGUE-ZAGUE COM CSS PURO
+     ========================================== */
+  @keyframes choqueZigueZague {
+    0%, 100% { transform: scaleX(1) translateX(0); opacity: 0; }
+    20% { transform: scaleX(1.5) translateX(-20px) skewX(-10deg); opacity: 1; }
+    23% { transform: scaleX(0.5) translateX(30px); opacity: 0.2; } /* Micro-estalo */
+    25% { transform: scaleX(2) translateX(-10px) skewX(15deg); opacity: 1; } /* Pico de energia */
+    60% { transform: scaleX(1.2) translateX(15px); opacity: 0.8; }
+    62% { transform: scaleX(0.3) translateX(-5px); opacity: 0.1; } /* Segundo estalo */
   }
   
-  /* ---------- 4. AURA VERMELHA FURIOSA (OOZARU / SAGA SAIYAJIN) ---------- */
-  @keyframes auraVermelha {
-    0% { filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.5)); }
-    50% { filter: drop-shadow(0 0 25px rgba(255, 0, 0, 1)) drop-shadow(0 0 35px rgba(139, 0, 0, 0.8)); }
-    100% { filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.5)); }
+  .raio-eletrico-css {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    /* O segredo do zigue-zague: o alto contraste junta as linhas borradas em faíscas */
+    filter: blur(1px) contrast(20) brightness(1.5); 
+    opacity: 0; /* Escondido por padrão */
+    overflow: hidden;
   }
-  .aura-vermelha {
-    animation: auraVermelha 2s infinite ease-in-out;
-    border-left: 6px solid #ff0000 !important;
+  
+  .raio-eletrico-css::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 35%;
+    width: 8px;
+    height: 140%;
+    /* Cria o efeito quebrado e serrilhado elétrico */
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      #ffffff 10px,
+      #ffd700 15px,
+      transparent 15px,
+      transparent 25px
+    );
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffaa00;
   }
-  .aura-vermelha .container-img-card, .aura-vermelha h3 {
-    animation: auraVermelha 2s infinite ease-in-out;
+  
+  /* ATIVADOR UNIFICADO: Ativa o zigue-zague ao passar o mouse em QUALQUER card com aura */
+  .aura-ssj:hover .raio-eletrico-css,
+  .aura-blue:hover .raio-eletrico-css,
+  .aura-ego:hover .raio-eletrico-css,
+  .aura-vermelha:hover .raio-eletrico-css {
+    opacity: 1;
+    animation: choqueZigueZague 0.6s infinite linear;
   }
+  /* ==========================================
+   EFEITO DE ESFERAS DO DRAGÃO FLUTUANDO (AMBOS OS LADOS)
+   ========================================== */
+
+/* Animação suave de subida e descida */
+@keyframes flutuarSuave {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); } /* Sobe 20px no ápice */
+  100% { transform: translateY(0); }
+}
+
+/* Configuração base para as esferas */
+.esferas-flutuantes {
+  position: fixed;
+  bottom: 40px; /* Distância do fundo da página */
+  width: 130px; /* Tamanho do bloco das esferas */
+  height: auto;
+  z-index: 1000; /* Fica acima do conteúdo */
+  pointer-events: none; /* Permite clicar no conteúdo por trás */
+  
+  /* REMOVE O FUNDO PRETO XADREZ DA IMAGEM E DEIXA SÓ AS ESFERAS */
+  mix-blend-mode: screen; 
+  
+  /* Sombra brilhante neon para dar destaque */
+  filter: drop-shadow(0 0 15px rgba(255, 102, 0, 0.6)); 
+}
+
+/* Lado Esquerdo */
+.esferas-esquerda {
+  left: 30px;
+  animation: flutuarSuave 3.5s infinite ease-in-out;
+}
+
+/* Lado Direito */
+.esferas-direita {
+  right: 30px;
+  /* Tempo de 4 segundos para os dois lados flutuarem em ritmos diferentes (mais realista) */
+  animation: flutuarSuave 4s infinite ease-in-out;
+}
+/* ==========================================
+   ELEMENTOS FLUTUANTES CORRIGIDOS (SEM FUNDO)
+   ========================================== */
+
+/* Animação mística e suave de flutuar */
+@keyframes flutuarSuave {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* DRAGÃO DA ESQUERDA (Fundo Branco Removido com Multiply) */
+.lado-shenlong {
+  position: fixed;
+  bottom: 40px; 
+  left: 20px;
+  width: 130px; 
+  height: auto;
+  z-index: 1000;
+  pointer-events: none; 
+  
+  /* CORREÇÃO AQUI: Apaga perfeitamente o quadrado branco da imagem */
+  mix-blend-mode: multiply; 
+  
+  animation: flutuarSuave 4.5s infinite ease-in-out;
+}
+
+/* DRAGÃO DA DIREITA (Fundo Xadrez Falso Tratado) */
+.lado-esferas {
+  position: fixed;
+  bottom: 40px; 
+  right: 20px;
+  width: 130px; 
+  height: auto;
+  z-index: 1000;
+  pointer-events: none; 
+  
+  /* CORREÇÃO AQUI: Remove o xadrez claro e dá um brilho dourado neon */
+  mix-blend-mode: color-dodge; 
+  filter: drop-shadow(0 0 10px rgba(255, 166, 0, 0.8)) brightness(1.2);
+  
+  animation: flutuarSuave 3.5s infinite ease-in-out;
+}
+
+
+  
+  
+
+  
   
   
   
