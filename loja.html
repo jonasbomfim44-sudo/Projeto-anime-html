@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loja temática demonstrativa de Dragon Ball: conheça a coleção inspirada no orgulho Saiyajin.">
+  <title>Loja Saiyajin | Portal Dragon Ball</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="loja.css">
+  <script src="loja.js" defer></script>
+</head>
+<body>
+  <div class="esferas-flutuantes esferas-esquerda" aria-hidden="true">
+    <img src="imagens/esferas.jpg" alt="">
+  </div>
+  <div class="esferas-flutuantes esferas-direita" aria-hidden="true">
+    <img src="imagens/esferas.jpg" alt="">
+  </div>
+
+  <nav class="loja-nav" aria-label="Menu principal">
+    <strong class="loja-nav-brand">🐉 DRAGON BALL</strong>
+    <div class="loja-nav-links">
+      <a href="index.html">Vegeta</a>
+      <a href="akira.html">Akira</a>
+      <a href="pages/sobre_o_anime.html">Sobre o Anime</a>
+      <a href="topicos.html">Temporadas</a>
+      <a href="personagens.html">Personagens</a>
+      <a href="temporadas.html">Sagas</a>
+      <a href="transformacoes.html">Transformações</a>
+      <a href="loja.html" aria-current="page">Loja</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="loja-hero" aria-labelledby="loja-titulo">
+      <div class="loja-hero-copy">
+        <span class="loja-eyebrow">COLEÇÃO DRAGON BALL • CONCEITO DE LOJA</span>
+        <h1 id="loja-titulo">O orgulho Saiyajin na sua coleção.</h1>
+        <p>Explore uma vitrine inspirada no universo de Vegeta. Um projeto de página de vendas com visual, produtos e carrinho demonstrativos.</p>
+        <a class="loja-cta" href="#produtos">Explorar a coleção <span aria-hidden="true">→</span></a>
+        <p class="loja-hero-note">Demonstração acadêmica: não há estoque, venda real nem pagamento.</p>
+      </div>
+      <div class="loja-hero-art">
+        <img src="imagens/vegeta_p.jpg" alt="Imagem temática de Vegeta" loading="eager">
+        <span class="loja-hero-stamp">PODER • ORGULHO • EVOLUÇÃO</span>
+      </div>
+    </section>
+
+    <section class="loja-strip" aria-label="Destaques da página">
+      <span>★ Universo Dragon Ball</span>
+      <span>★ Visual inspirado no site</span>
+      <span>★ Carrinho interativo de exemplo</span>
+    </section>
+
+    <section id="produtos" class="loja-section" aria-labelledby="produtos-titulo">
+      <div class="loja-section-heading">
+        <div>
+          <span class="loja-eyebrow loja-eyebrow-dark">ESCOLHA SEU FAVORITO</span>
+          <h2 id="produtos-titulo">Coleção do Príncipe Saiyajin</h2>
+        </div>
+        <p>Itens fictícios para demonstrar a apresentação de produtos. As imagens são temáticas e não representam mercadorias reais.</p>
+      </div>
+      <div class="loja-grid">
+        <article class="loja-product">
+          <div class="loja-product-image">
+            <img src="imagens/vegeta_p.jpg" alt="Arte temática de Vegeta usada para ilustrar o conceito de camiseta" loading="lazy">
+            <span>EXEMPLO</span>
+          </div>
+          <div class="loja-product-content">
+            <p class="loja-product-category">VESTUÁRIO • CONCEITO</p>
+            <h3>Camiseta Príncipe Saiyajin</h3>
+            <p>Ideia de uma camiseta para fãs do guerreiro que nunca desiste de evoluir.</p>
+            <div class="loja-product-bottom"><strong>R$ 59,90</strong><button type="button" data-add="camiseta">Adicionar +</button></div>
+          </div>
+        </article>
+
+        <article class="loja-product">
+          <div class="loja-product-image">
+            <img src="imagens/blue.jpg" alt="Arte temática de Vegeta em sua transformação azul, ilustrando um pôster" loading="lazy">
+            <span>EXEMPLO</span>
+          </div>
+          <div class="loja-product-content">
+            <p class="loja-product-category">DECORAÇÃO • CONCEITO</p>
+            <h3>Pôster Super Saiyajin Blue</h3>
+            <p>Conceito de pôster para dar um toque de energia Saiyajin ao ambiente.</p>
+            <div class="loja-product-bottom"><strong>R$ 29,90</strong><button type="button" data-add="poster">Adicionar +</button></div>
+          </div>
+        </article>
+
+        <article class="loja-product">
+          <div class="loja-product-image">
+            <img src="imagens/roxo.webp" alt="Arte temática de Vegeta Ultra Ego, usada para ilustrar o conceito de caneca" loading="lazy">
+            <span>EXEMPLO</span>
+          </div>
+          <div class="loja-product-content">
+            <p class="loja-product-category">ACESSÓRIOS • CONCEITO</p>
+            <h3>Caneca Ultra Ego</h3>
+            <p>Conceito de presente inspirado em uma das transformações mais marcantes de Vegeta.</p>
+            <div class="loja-product-bottom"><strong>R$ 45,90</strong><button type="button" data-add="caneca">Adicionar +</button></div>
+          </div>
+        </article>
+      </div>
+      <p class="loja-disclaimer">* Nomes, preços e produtos são ilustrativos. Esta página não comercializa artigos licenciados de Dragon Ball.</p>
+    </section>
+
+    <section class="loja-cart-area" id="carrinho" aria-labelledby="carrinho-titulo">
+      <div class="loja-cart-intro">
+        <span class="loja-eyebrow">SUA SELEÇÃO</span>
+        <h2 id="carrinho-titulo">Monte seu carrinho.</h2>
+        <p>Adicione os itens acima para experimentar o funcionamento da página. Nenhum pedido será enviado.</p>
+        <a href="#produtos" class="loja-outline-link">Continuar escolhendo ↑</a>
+      </div>
+      <div class="loja-cart-panel">
+        <div class="loja-cart-header"><h3>Meu carrinho</h3><span id="carrinho-contagem" aria-live="polite">0 itens</span></div>
+        <p class="loja-empty" id="carrinho-vazio">Seu carrinho está vazio. Adicione um produto para começar.</p>
+        <ul class="loja-cart-list" id="carrinho-lista" aria-live="polite"></ul>
+        <div class="loja-cart-total"><span>Subtotal demonstrativo</span><strong id="carrinho-total">R$ 0,00</strong></div>
+        <button type="button" id="finalizar-pedido" class="loja-checkout" disabled>Simular finalização</button>
+        <p class="loja-checkout-message" id="mensagem-pedido" role="status" hidden>Esta é uma loja de demonstração. O carrinho funciona, mas não há envio de pedidos ou cobrança.</p>
+        <p class="loja-cart-small">Nenhum dado de pagamento é solicitado ou armazenado.</p>
+      </div>
+    </section>
+
+    <section class="loja-faq" aria-labelledby="faq-titulo">
+      <h2 id="faq-titulo">Dúvidas rápidas</h2>
+      <details><summary>Posso comprar algum desses produtos?</summary><p>Ainda não. Esta é uma página de vendas fictícia criada como demonstração de desenvolvimento web.</p></details>
+      <details><summary>O carrinho funciona?</summary><p>Sim. É possível adicionar e remover produtos e calcular o subtotal no navegador, mas não é possível realizar pagamentos.</p></details>
+      <details><summary>Os preços e as imagens são reais?</summary><p>Não. Os valores são exemplos e as artes retratam o universo Dragon Ball, não fotografias de produtos à venda.</p></details>
+    </section>
+  </main>
+
+  <footer class="loja-footer">
+    <p>Portal Dragon Ball • Projeto de desenvolvimento web inspirado no universo de Vegeta.</p>
+    <p>Página conceitual de loja. Sem vínculo comercial ou oficial com os titulares de Dragon Ball.</p>
+  </footer>
+</body>
+</html>
