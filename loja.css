@@ -121,3 +121,18 @@ body { max-width: 1060px; }
   html { scroll-behavior:auto; }
   *, *::before, *::after { transition:none !important; animation:none !important; }
 }
+
+/* Espaço para texto e controles nas menores telas. */
+@media (max-width: 760px) {
+  .loja-hero > *, .loja-cart-area > *, .loja-grid > * { min-width: 0; }
+  .loja-hero-art { height: 270px; }
+  .loja-nav-links a, .loja-product-bottom button, .loja-cart-list button, .loja-checkout { min-height: 44px; }
+}
+@media (max-width: 380px) {
+  .loja-hero-copy { padding: 26px 18px; }
+  .loja-cta { gap: 12px; padding: 13px; }
+  .loja-cart-area { padding: 16px; }
+  .loja-cart-panel { padding: 14px; }
+  .loja-product-bottom, .loja-cart-header, .loja-cart-total { flex-wrap: wrap; }
+  .loja-cart-list li { flex-wrap: wrap; }
+}

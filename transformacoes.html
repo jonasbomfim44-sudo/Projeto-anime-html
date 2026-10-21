@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="estilo.css">
 
     <div class="esferas-flutuantes esferas-esquerda">
-        <img src="./imagens/eee.png"" alt="Esferas do Dragão Esquerda" style="width: 100%; height: auto;">
+        <img src="./imagens/eee.png" alt="Esferas do Dragão Esquerda" style="width: 100%; height: auto;">
     </div>
     
     <!-- ESFERAS FLUTUANDO NO LADO DIREITO -->
     <div class="esferas-flutuantes esferas-direita">
-        <img src="./imagens/eee.png"" alt="Esferas do Dragão Direita" style="width: 100%; height: auto;">
+        <img src="./imagens/eee.png" alt="Esferas do Dragão Direita" style="width: 100%; height: auto;">
     </div>
 
 </head>
@@ -23,59 +23,18 @@
     style="font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; line-height: 1.6; background-color: #f7f9fa; color: #222;">
 
     <!-- MENU DE NAVEGAÇÃO  -->
-    <nav
-        style="text-align: center; margin-bottom: 40px; padding: 18px; background-color: #101820; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-
-        <b style="color: #ff6600; font-size: 18px;">
-            🐉 DRAGON BALL
-        </b>
-
-        <br><br>
-
-        <a href="index.html" style="margin: 0 8px; text-decoration: none; color: white; font-weight: bold;">
-            Vegeta
-        </a>
-
-        |
-
-        <a href="akira.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Akira
-        </a>
-
-        |
-
-        <a href="pages/sobre_o_anime.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Sobre o Anime
-        </a>
-
-        |
-
-        <a href="topicos.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Temporadas
-        </a>
-
-        |
-
-        <a href="personagens.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Personagens
-        </a>
-
-        |
-
-        <a href="temporadas.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Sagas
-        </a>
-
-        |
-
-        <a href="transformacoes.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Transformações
-        </a>
-
-    
-        |
-
-        <a href="loja.html" style="margin: 0 8px; text-decoration: none; color: white;">Loja</a>
+    <nav class="portal-nav" aria-label="Menu principal">
+    <b class="portal-nav-brand">🐉 DRAGON BALL</b>
+    <div class="portal-nav-links">
+        <a href="index.html">Vegeta</a>
+        <a href="akira.html">Akira</a>
+        <a href="pages/sobre_o_anime.html">Sobre o Anime</a>
+        <a href="topicos.html">Temporadas</a>
+        <a href="personagens.html">Personagens</a>
+        <a href="temporadas.html">Sagas</a>
+        <a href="transformacoes.html" aria-current="page">Transformações</a>
+        <a href="loja.html">Loja</a>
+    </div>
 </nav>
 
 
@@ -89,7 +48,7 @@
 
 
         <!-- FORMA 1: OZAARU CLÁSSICO -->
-        <div class="aura-vermelha"
+        <div class="conteudo-card aura-vermelha"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
 
             <div class="container-img-card">
@@ -111,7 +70,7 @@
         </div>
 
         <!-- FORMA 2: SUPER SAIYAJIN CLÁSSICO -->
-        <div class="aura-ssj"
+        <div class="conteudo-card aura-ssj"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
 
             <div class="container-img-card">
@@ -132,7 +91,7 @@
         </div>
 
         <!-- FORMA 3: SUPER VEGETA -->
-        <div class="aura-ssj"
+        <div class="conteudo-card aura-ssj"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/grau.jpg" alt="Super Vegeta" class="img-card foco-topo">
@@ -152,7 +111,7 @@
 
 
         <!-- FORMA 4: SUPER SAIYAJIN GRAU 3 -->
-        <div class="aura-ssj"
+        <div class="conteudo-card aura-ssj"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/superr.jpg" alt="SSJ Grau 3" class="img-card foco-topo">
@@ -174,7 +133,7 @@
 
 
         <!-- FORMA 6: SUPER SAIYAJIN 2 -->
-        <div class="aura-ssj"
+        <div class="conteudo-card aura-ssj"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/vgts2.webp" alt="Vegeta SSJ2" class="img-card">
@@ -196,7 +155,7 @@
 
 
         <!-- CARD 7: MAJIN VEGETA -->
-        <div class="aura-ssj"
+        <div class="conteudo-card aura-ssj"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/majin.jpg" alt="Majin Vegeta" class="img-card center">
@@ -216,7 +175,7 @@
 
 
         <!-- CARD 8: SUPER BABY VEGETA 2 -->
-        <div class="aura-ssj"
+        <div class="conteudo-card aura-ssj"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/baby1.jpg" alt="Super Baby Vegeta 2" class="img-card foco-topo">
@@ -236,7 +195,7 @@
 
 
         <!-- CARD 9: BABY OZAARU DOURADO -->
-        <div class="aura-ssj"
+        <div class="conteudo-card aura-ssj"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/ozarud.jpg" alt="Baby Oozaru Dourado" class="img-card foco-topo">
@@ -255,7 +214,7 @@
         </div>
 
         <!-- CARD 10: SUPER SAIYAJIN 4 -->
-        <div class="aura-vermelha"
+        <div class="conteudo-card aura-vermelha"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
 
             <div class="container-img-card">
@@ -276,7 +235,7 @@
 
 
         <!-- CARD 11: VEGETA CÓPIA -->
-        <div class="aura-ego"
+        <div class="conteudo-card aura-ego"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #8c00ff !important; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/roxo.webp" alt="Vegeta Cópia" class="img-card">
@@ -296,7 +255,7 @@
 
         <!-- CARD 12: SUPER SAIYAJIN GOD -->
         <!-- FORMA 7: SUPER SAIYAJIN DEUS (ALINHADO E FOCADO NO ROSTO) -->
-        <div class="aura-vermelha"
+        <div class="conteudo-card aura-vermelha"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <!-- Adicionei o estilo inline direto na imagem para forçar o foco no lado direito (85%) -->
@@ -317,7 +276,7 @@
         </div>
 
         <!-- CARD 13: SUPER SAIYAJIN BLUE -->
-        <div class="aura-blue"
+        <div class="conteudo-card aura-blue"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #00a2ff !important; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/blue.jpg" alt="Super Saiyajin Blue" class="img-card">
@@ -338,7 +297,7 @@
 
 
         <!-- CARD 14: SUPER SAIYAJIN BLUE APERFEIÇOADO -->
-        <div class="aura-blue"
+        <div class="conteudo-card aura-blue"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #00a2ff !important; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/aper.jpg" alt="Super Saiyajin Blue Aperfeiçoado" class="img-card">
@@ -358,7 +317,7 @@
 
 
         <!-- CARD 15: SUPER SAIYAJIN BLUE EVOLUTION -->
-        <div class="aura-blue"
+        <div class="conteudo-card aura-blue"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #00a2ff !important; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/evolu.webp" alt="Super Saiyajin Blue Evolution" class="img-card">
@@ -378,7 +337,7 @@
 
 
         <!-- CARD 16: EGO SUPERIOR -->
-        <div class="aura-ego"
+        <div class="conteudo-card aura-ego"
             style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #8c00ff !important; border-radius: 8px; margin-bottom: 25px;">
             <div class="container-img-card">
                 <img src="./imagens/eguu.jpg" alt="Ego Superior" class="img-card">

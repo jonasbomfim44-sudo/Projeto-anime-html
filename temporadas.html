@@ -8,69 +8,30 @@
     <link rel="stylesheet" href="estilo.css">
 
     <div class="esferas-flutuantes esferas-esquerda">
-        <img src="./imagens/eee.png"" alt="Esferas do Dragão Esquerda" style="width: 100%; height: auto;">
+        <img src="./imagens/eee.png" alt="Esferas do Dragão Esquerda" style="width: 100%; height: auto;">
     </div>
     
     <!-- ESFERAS FLUTUANDO NO LADO DIREITO -->
     <div class="esferas-flutuantes esferas-direita">
-        <img src="./imagens/eee.png"" alt="Esferas do Dragão Direita" style="width: 100%; height: auto;">
+        <img src="./imagens/eee.png" alt="Esferas do Dragão Direita" style="width: 100%; height: auto;">
     </div>
 
 </head>
 <body style="font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; line-height: 1.6; background-color: #f7f9fa; color: #222;">
 
     <!-- MENU DE NAVEGAÇÃO  -->
-    <nav style="text-align: center; margin-bottom: 40px; padding: 18px; background-color: #101820; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-
-        <b style="color: #ff6600; font-size: 18px;">
-            🐉 DRAGON BALL
-        </b>
-
-        <br><br>
-        <a href="index.html" style="margin: 0 8px; text-decoration: none; color: white; font-weight: bold;">
-            Vegeta
-        </a>
-
-        |
-
-        <a href="akira.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Akira
-        </a>
-
-        |
-
-        <a href="pages/sobre_o_anime.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Sobre o Anime
-        </a>
-
-        |
-
-        <a href="topicos.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Temporadas
-        </a>
-
-        |
-
-        <a href="personagens.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Personagens
-        </a>
-
-        |
-
-        <a href="temporadas.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Sagas
-        </a>
-
-        |
-
-        <a href="transformacoes.html" style="margin: 0 8px; text-decoration: none; color: white;">
-            Transformações
-        </a>
-
-    
-        |
-
-        <a href="loja.html" style="margin: 0 8px; text-decoration: none; color: white;">Loja</a>
+    <nav class="portal-nav" aria-label="Menu principal">
+    <b class="portal-nav-brand">🐉 DRAGON BALL</b>
+    <div class="portal-nav-links">
+        <a href="index.html">Vegeta</a>
+        <a href="akira.html">Akira</a>
+        <a href="pages/sobre_o_anime.html">Sobre o Anime</a>
+        <a href="topicos.html">Temporadas</a>
+        <a href="personagens.html">Personagens</a>
+        <a href="temporadas.html" aria-current="page">Sagas</a>
+        <a href="transformacoes.html">Transformações</a>
+        <a href="loja.html">Loja</a>
+    </div>
 </nav>
 
 
@@ -81,7 +42,7 @@
     <div style="max-width: 900px; margin: 0 auto;">
 
         <!-- SAGA DOS SAIYAJINS -->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div class="conteudo-card" style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
                 <img src="./imagens/vss.jpg" alt="Saga dos Saiyajins" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -95,7 +56,7 @@
         </div>
 
         <!-- SAGA FREEZA -->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div class="conteudo-card" style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
                 <img src="./imagens/vsf.webp" alt="Saga Freeza" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -109,7 +70,7 @@
         </div>
 
         <!-- SAGA CELL -->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div class="conteudo-card" style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
                 <img src="./imagens/vsc.webp" alt="Saga Cell" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -123,7 +84,7 @@
         </div>
 
         <!-- SAGA MAJIN BUU -->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div class="conteudo-card" style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
                 <img src="./imagens/vsm.jpg" alt="Saga Majin Buu" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -137,7 +98,7 @@
         </div>
 
         <!-- DRAGON BALL GT -->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div class="conteudo-card" style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
                 <img src="./imagens/vgt.jpg" alt="Dragon Ball GT" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -151,7 +112,7 @@
         </div>    
         
         <!-- DRAGON BALL SUPER F-->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div class="conteudo-card" style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
                 <img src="./imagens/vgt sf.jpg" alt="Dragon Ball Super F" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -172,7 +133,7 @@
         </div>  
 
         <!-- SAGA BLACK -->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div class="conteudo-card" style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
                 <img src="./imagens/vgtblk.avif" alt="saga black" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -192,7 +153,7 @@
         </div>  
 
         <!-- SAGA TORNEIO DO PODER-->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div class="conteudo-card" style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
                 <img src="./imagens/torneio.jpg" alt="Saga Torneio do Poder" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -213,7 +174,7 @@
         </div>  
 
         <!-- MANGA  -->
-        <div style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
+        <div class="conteudo-card" style="display: flex; align-items: stretch; background-color: white; border: 1px solid #e1e4e6; border-left: 6px solid #ff6600; border-radius: 8px; margin-bottom: 25px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.04);">
             <div style="width: 260px; min-height: 220px; background-color: #eaeaea; flex-shrink: 0;">
                 <img src="./imagens/vsmg.jpg" alt="Manga" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
