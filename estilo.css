@@ -240,6 +240,19 @@
 
   animation: flutuarSuave 4.5s infinite ease-in-out;
 }
+@media (max-width: 760px) {
+  .conteudo-card .container-img-card {
+    height: auto !important;
+  }
+
+  .conteudo-card img{
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+}
 
 
   
