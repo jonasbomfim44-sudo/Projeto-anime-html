@@ -241,58 +241,53 @@
   animation: flutuarSuave 4.5s infinite ease-in-out;
 }
 @media (max-width: 760px) {
-  .conteudo-card .container-img-card {
-    height: auto !important;
+  body {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px !important;
+    background-attachment: scroll !important;
   }
 
-  .conteudo-card img{
+  .esferas-flutuantes,
+  .lado-shenlong {
+    display: none;
+  }
+
+  .conteudo-card {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .conteudo-card > div {
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100% !important;
+  }
+
+  .conteudo-card > div:first-child {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .conteudo-card img {
     display: block;
     width: 100% !important;
     height: auto !important;
     max-height: none !important;
     object-fit: contain !important;
   }
-}
 
+  nav a {
+    display: inline-block;
+    padding: 10px 6px;
+  }
 
-/* Navegação compartilhada e adaptação para telas menores. */
-.portal-nav {
-  text-align: center;
-  margin-bottom: 40px;
-  padding: 18px;
-  background: #101820;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.15);
-}
-.portal-nav-brand { display: block; color: #ff6600; font-size: 18px; margin-bottom: 16px; }
-.portal-nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-.portal-nav-links a { color: white; text-decoration: none; padding: 10px 12px; border-radius: 6px; }
-.portal-nav-links a[aria-current="page"] { background: #ff6600; color: #101820; font-weight: bold; }
-.portal-nav a:focus-visible { outline: 3px solid #62b7ff; outline-offset: 2px; }
-.conteudo-card > div { min-width: 0; }
-img, video, iframe { max-width: 100%; }
+  h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.2;
+  }
 
-@media (max-width: 760px) {
-  body, body * , body *::before, body *::after { box-sizing: border-box; }
-  body { width: 100%; padding: 12px !important; background-attachment: scroll !important; }
-  .esferas-flutuantes, .lado-shenlong { display: none; }
-  .portal-nav { padding: 14px 10px; margin-bottom: 24px; }
-  .portal-nav-links, .loja-nav-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
-  .portal-nav-links a, .loja-nav-links a {
-    display: flex; align-items: center; justify-content: center;
-    min-height: 44px; padding: 10px 6px; font-size: .9rem; overflow-wrap: anywhere;
+  h1, h2, h3, p, a {
+    overflow-wrap: anywhere;
   }
-  .conteudo-card { flex-direction: column; align-items: stretch !important; }
-  .conteudo-card > div:first-child:not(.container-img-card) {
-    width: 100% !important; height: auto !important; min-height: 0 !important;
-  }
-  .conteudo-card > div:first-child:not(.container-img-card) > img {
-    display: block; width: 100%; height: auto !important; max-height: 360px; object-fit: cover;
-  }
-  .conteudo-card .container-img-card { width: 100% !important; height: 300px !important; }
-  .conteudo-card .img-card { border-radius: 7px 7px 0 0; object-position: center top; }
-  .conteudo-card > div:last-child { padding: 20px !important; }
-  h1 { font-size: clamp(1.6rem, 6vw, 2.2rem) !important; line-height: 1.2; overflow-wrap: anywhere; }
-  h2, h3, p, a { overflow-wrap: anywhere; }
-  .conteudo-card p { text-align: left !important; }
 }
