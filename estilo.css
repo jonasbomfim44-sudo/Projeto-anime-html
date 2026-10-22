@@ -333,3 +333,50 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+/* Mais espaço entre as linhas dos textos */
+.conteudo-card p {
+  line-height: 1.75;
+  text-align: left !important;
+}
+
+/* Movimento suave nos cards */
+.conteudo-card {
+  transition: transform 0.25s ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .conteudo-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Destaque dos links ao passar o mouse */
+nav a {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #ff6600;
+  color: #101820 !important;
+  text-decoration: none !important;
+}
+
+/* Facilita navegar usando o teclado */
+nav a:focus-visible {
+  outline: 3px solid #ff9b4f;
+  outline-offset: 3px;
+}
+
+/* Botões do menu mais fáceis de tocar no celular */
+@media (max-width: 760px) {
+  nav a {
+    box-sizing: border-box;
+    min-height: 44px;
+  }
+}
+
+/* Seleção de texto nas cores do site */
+::selection {
+  background: #ff6600;
+  color: #101820;
+}
